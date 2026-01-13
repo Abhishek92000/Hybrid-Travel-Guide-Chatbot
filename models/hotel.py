@@ -91,36 +91,4 @@ def find_best_hotel(user_budget, nights, preferred_area, room_type):
 # print(find_best_hotel(3000, 1, "Jogeshwari west","Standard Room"))
 
 
-#
-# from sklearn.metrics import confusion_matrix, classification_report
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-#
-# y_pred = pipeline.predict(X)
-#
-# # Creating the Confusion Matrix
-# cm = confusion_matrix(y, y_pred)
-#
-# # Plotting the Heatmap
-# plt.figure(figsize=(6,4))
-# sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
-#             xticklabels=['Not Recommended', 'Recommended'],
-#             yticklabels=['Not Recommended', 'Recommended'])
-# plt.xlabel('Predicted Label')
-# plt.ylabel('Actual Label')
-# plt.title('Hotel Recommendation Confusion Matrix')
-# plt.show()
-#
-#  # Accuracy Metrics
-# print("\n--- Model Performance Report ---")
-# print(classification_report(y, y_pred))
-#
-# # Test Case 1: Student on a tight budget
-# print("--- TEST: Student Budget ---")
-# print(find_best_hotel(user_budget=1500, nights=1, preferred_area="Jogeshwari West", room_type="AC Bunk Bed"))
-#
-# # Test Case 2: Business traveler looking for luxury
-# print("\n--- TEST: Business Traveler ---")
-# print(find_best_hotel(user_budget=15000, nights=2, preferred_area="Jogeshwari West", room_type="Executive Suite"))
-#
-#
+
