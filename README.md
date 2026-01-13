@@ -1,4 +1,5 @@
-🏝️ Mumbai Hybrid Travel Guide
+🏝️ Mumbai Hybrid Travel Guide ChatBot (llm + RAG + ML)
+
 An intelligent, context-aware travel assistant for Mumbai. This project uniquely combines Generative AI (RAG) for historical knowledge with Deterministic Machine Learning for precise logistics (Hotels, Restaurants, and Trips).
 
 ✨ Key Features
