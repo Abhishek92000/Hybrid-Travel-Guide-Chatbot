@@ -23,7 +23,7 @@ def smart_label(row):
     # Normal/Standard rooms
     elif row['Room Type'] in ['Deluxe Room', 'Standard Room', 'Classic Room']:
         return 1 if (row['Rating'] >= 3.8 and row['Price (INR)'] <= 5000) else 0
-    # Budget/Dorm rooms
+    # Budget
     else:
         return 1 if (row['Rating'] <= 3.5 and row['Price (INR)'] <= 2500) else 0
 
@@ -78,17 +78,18 @@ def find_best_hotel(user_budget, nights, preferred_area, room_type):
         (df["Room Type"] == room_type)
         ].copy()
 
-    # 3. Handle Empty Results
+
     if candidates.empty:
         return f"I'm sorry, I couldn't find any {room_type}s in {area_label} under ₹{budget_per_night} per night."
 
-    # 4. Rank and Return
+  
     cand_features = candidates[["Room Type", 'Rating', "Price (INR)", "Area_Code"]]
     candidates['Match_Score'] = pipeline.predict_proba(cand_features)[:, 1]
 
     return candidates.sort_values(by='Match_Score', ascending=False).head(3)
 
 # print(find_best_hotel(3000, 1, "Jogeshwari west","Standard Room"))
+
 
 
 
